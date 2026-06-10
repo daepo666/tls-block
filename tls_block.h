@@ -38,7 +38,7 @@ uint16_t cal_checksum(uint8_t *buf, int len);
 
 uint16_t tcp_checksum(ipv4_header *ip, tcp_header *tcp, uint8_t *data, int data_len);
 int parse_tls_sni(uint8_t *data, int data_len, char *sni, int sni_size);
-int sni_compare(uint8_t *data, int data_len, const std::string &pattern);
+int sni_cmp(uint8_t *data, int data_len, const std::string &pattern);
 
 tls_stream *find_stream(block_info *info, ipv4_header *ip, tcp_header *tcp);
 tls_stream *make_new_stream(block_info *info, ipv4_header *ip, tcp_header *tcp);
